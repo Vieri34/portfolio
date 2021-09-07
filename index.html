@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Genshin Impact fansite">
+		<meta prefix="og: http://ogp.me/ns#" property="og:type" content="website" />
+		<meta prefix="og: http://ogp.me/ns#" property="og:title" content="Portfolio de Matthieu Balaguer" />
+		<meta prefix="og: http://ogp.me/ns#" property="og:image"  content="images/page-accueil.png" />
+		<meta prefix="og: http://ogp.me/ns#" property="og:description" content="Bonjour, je suis développeur front-end à Sète, bienvenue sur mon portfolio !" />
+		<meta prefix="og: http://ogp.me/ns#" property="og:url" content="https://mathieu.defiweb34.com/" />
+		<link rel="icon" type="image/x-icon" href="images/avataaars.png">
+		<title>Portfolio | Matthieu Balaguer</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link href="css/lightbox.css" rel="stylesheet">
+		<link href="css/index.css" rel="stylesheet" media="all" type="text/css">
+		<link href="css/nav.css" rel="stylesheet" media="all" type="text/css">
+	</head>
+
+	<body>
+<!-- header -->
+		<header class="navbar-fixed-top">
+			<a href="index.html"><img src="images/avataaars.png" alt="profil avatar"></a>
+			<nav class="desktopMenu">
+				<a href="index.html">Accueil</a>
+				<a href="index.html#profil">Profil</a>
+				<a href="index.html#travaux">Travaux</a>
+			</nav>
+			
+			<nav class="smartphoneMenu">
+				<div id="menuToggle">
+					<input type="checkbox">
+					<span></span>
+					<span></span>
+					<span></span>
+					<ul id="menu">
+						<li><a href="index.html">Accueil</a></li>
+						<li><a href="index.html#profil">Profil</a></li>
+						<li><a href="index.html#travaux">Travaux</a></li>
+					</ul>
+				</div>
+			</nav>
+
+		</header>
+
+		<section class="hero">
+			<div class="bg-text-container">
+				<div class="animate-text">
+					<span>Portfolio&nbsp;</span>
+					<span>Portfolio&nbsp;</span>
+				</div>
+				<div class="animate-text left">
+					<span>Portfolio&nbsp;</span>
+					<span>Portfolio&nbsp;</span>
+				</div>
+				<div class="animate-text">
+					<span>Portfolio&nbsp;</span>
+					<span>Portfolio&nbsp;</span>
+				</div>
+				<div class="animate-text left">
+					<span>Portfolio&nbsp;</span>
+					<span>Portfolio&nbsp;</span>
+				</div>
+				<div class="animate-text">
+					<span>Portfolio&nbsp;</span>
+					<span>Portfolio&nbsp;</span>
+				</div>
+				<div class="animate-text left">
+					<span>Portfolio&nbsp;</span>
+					<span>Portfolio&nbsp;</span>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="col">
+					<h1>Matthieu Balaguer</h1>
+					<p>Bonjour, je suis développeur front-end à Sète.<br>
+						Bienvenue sur mon portfolio !</p>
+				</div>
+			</div>
+		</section>
+
+		<section id="profil">
+			<h2>Profil</h2>
+			<a href="images/avataaars.png" data-lightbox="avatar-profil"><img src="images/avataaars.png" alt="profil avatar"></a>
+			<div class="text">
+				<p class="textPresent">Passionné par les nouvelles technologies et le secteur du numérique depuis toujours, c'est tout naturellement que je me suis dirigé vers le métier de développeur Front-End.<br>
+				Je maîtrise parfaitement les langages HTML, CSS et je peux aussi travailler avec Javascript et PHP.<br>
+				Je maîtrise aussi le CMS Wordpress, sur lequel j'ai réalisé plusieurs sites professionnels.
+				</p>
+				<p>Contactez moi: <a href="mailto:tmac3485@hotmail.com">tmac3485@hotmail.com</a></p>
+			</div>
+		</section>
+
+<!-- images -->
+		<section id="travaux">
+			<h2>Travaux</h2>
+			<div id="slider" class="carousel slide" data-ride="carousel">
+				<div class="carousel-inner">
+					<!-- slide pair 1 -->
+					<div class="carousel-item active">
+						<div class="row">
+							<figure class="imgCool col-xs"><a href="https://vieri.akibaroad.com/" target="_blank">
+							<img src="images/downtown.jpg" alt="slide 1"></a>
+								<figcaption class="captionCool"><a href="https://vieri.akibaroad.com/" target="_blank">DownTown Film</a></figcaption>
+							</figure>
+							<figure class="imgCool col-xs"><a href="https://akibaroad.com/" target="_blank">
+								<img src="images/akiba-road-overview.jpg" alt="slide 1"></a>
+								<figcaption class="captionCool"><a href="https://akibaroad.com/" target="_blank">Akiba Road</a></figcaption>
+							</figure>
+						</div>
+					</div>
+					<!-- slide pair 2 -->
+					<div class="carousel-item">
+						<div class="row">
+							<figure class="imgCool col-xs"><a href="https://mesclavie.com/" target="_blank">
+								<img src="images/mesclavie-overview.jpg" alt="slide 2"></a>
+								<figcaption class="captionCool"><a href="https://mesclavie.com/" target="_blank">Mesclavie</a></figcaption>
+							</figure>
+							<figure class="imgCool col-xs"><a href="travaux/test-animation-mario/index.html" target="_blank">
+							<img src="images/anim-mario.jpg" alt="slide 3"></a>
+								<figcaption class="captionCool"><a href="travaux/test-animation-mario/index.html" target="_blank">Anim CSS</a></figcaption>
+							</figure>
+						</div>
+					</div>
+					<!-- slide pair 3 -->
+					<div class="carousel-item">
+						<div class="row">
+							<figure class="imgCool col-xs"><a href="travaux/rock-paper-scisors/index.html" target="_blank">
+							<img src="images/chifoumi.jpg" alt="slide 5"></a>
+								<figcaption class="captionCool"><a href="travaux/rock-paper-scisors/index.html" target="_blank">Chifoumi JS</a></figcaption>
+							</figure>
+							<figure class="imgCool col-xs"><a href="images/logo_defiweb.png" data-lightbox="logo-defiweb">
+							<img src="images/logo_defiweb.png" alt="slide 5"></a>
+								<figcaption class="captionCool"><a href="images/logo_defiweb.png" target="_blank">Logo DefiWeb</a></figcaption>
+							</figure>
+						</div>
+					</div>
+				</div>
+				<!-- slide buttons -->
+				<a class="carousel-control-prev" href="#slider" role="button" data-slide="prev">
+				  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				  <span class="sr-only">Previous</span>
+				</a>
+				<a class="carousel-control-next" href="#slider" role="button" data-slide="next">
+				  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+				  <span class="sr-only">Next</span>
+				</a>
+			</div>
+
+		</section>
+
+<!-- bouton retour haut -->
+		<a id="button"></a>
+
+<!-- footer -->
+		<footer>
+			<p>&copy; 2021 Matthieu Balaguer</p>
+		</footer>
+<!-- js -->
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<script src="js/jquery.js"></script>
+		<script src="js/lightbox.js"></script>
+		<script>
+			lightbox.option({
+			  'fitImagesInViewport': false,
+			})
+		</script>
+		<script src="js/script.js"></script>
+	</body>
+
+</html>
