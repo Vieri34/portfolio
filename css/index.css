@@ -1,0 +1,298 @@
+/* font */
+@font-face {
+	font-family: montserrat; src: url(fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+	font-family: WorkSans-ExtraLight; src: url(../fonts/WorkSans-ExtraLight.otf);
+}
+
+/* all */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+  	font-family: montserrat;
+	background: #1e2134;
+	overflow-x: hidden;
+}
+
+a {
+	text-decoration: none !important;
+	transition: 0.3s;
+}
+
+h2 {
+	font-size: 2.5em;
+	letter-spacing: 1px;
+	width: 100%;
+	text-align: center;
+	color: rgb(59, 59, 59);
+}
+
+.hero {
+	height: 100vh;
+  	display: flex;
+  	align-items: center;
+  	line-height: 1.5;
+	transform: skewY(-5deg);
+	color: #fff;
+}
+
+.bg-text-container {
+    transform: translateX(-50%);
+    left: 50%;
+    position: absolute;
+  	z-index: -999;
+}
+
+@keyframes text-scrolling {
+  	0% { transform: translate3d(-100%, 0, 0); }
+  	100% { transform: translate3d(0%, 0, 0); }
+}
+
+.animate-text {
+  	animation: text-scrolling 20s linear infinite;
+  	will-change: transform;
+  	position: relative;
+  	white-space: nowrap;
+}
+
+.animate-text.left {
+	animation-direction: reverse;
+  }
+
+.bg-text-container span {
+	font-size: 280px;
+	color: transparent;
+	-webkit-text-stroke: 2px #30442a;
+	text-transform: uppercase;
+	display: inline-block;
+	flex-wrap: wrap;
+	line-height: 0.75;
+	font-weight: 800;
+}
+
+.container {
+	padding: 30px;
+	margin: 0 auto;
+}
+
+.container h1 {
+	font-size: 5em;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+.container p {
+	font-size: 1.5em;
+	letter-spacing: 1px;
+}
+
+/* profil */
+#profil {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	background: rgb(235, 238, 252);
+	transform: skewY(-5deg);
+	padding: 10px 10%;
+	margin: 5% 0;
+}
+
+#profil img {
+	width: 200px;
+	margin: 10px;
+}
+
+#profil .text {
+	width: 60%;
+	font-size: 1.1em;
+	text-align: justify;
+	color: rgb(59, 59, 59);
+	margin: 10px;
+}
+
+#profil a {
+	color: #1e2134;
+}
+
+#profil a:hover {
+	color: #585a66;
+}
+
+/* images */
+#travaux {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	background: rgb(235, 238, 252);
+	transform: skewY(-5deg);
+	margin: 5% 0;
+}
+
+#slider {
+	display: flex;
+	overflow: hidden;
+	position: relative;
+}
+
+.imgCool {
+	width: 40vw;
+	height: 100vh;
+	flex-shrink: 0;
+	margin: 15px;
+	overflow: hidden;
+	position: relative;
+	background: rgba(0, 0, 0, 0.205);
+}
+
+.imgCool img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: top center;
+	filter: brightness(60%);
+}
+
+.imgCool img:hover {
+	transform: scale(1.02);
+	filter: brightness(100%);
+	transition: 0.3s;
+}
+
+.imgCool:hover > .captionCool a {
+	background: white;
+	color: black;
+	text-shadow: initial;
+}
+
+.captionCool {
+	position: absolute;
+	left: 8%;
+	bottom: 5%;
+	background: none;
+}
+
+.captionCool a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: WorkSans-ExtraLight, sans-serif;
+	text-transform: capitalize;
+	white-space: nowrap;
+	font-size: 1.5em;
+	letter-spacing: 8px;
+	color: white;
+	width: 331px;
+	height: 60px;
+	min-height: 21px;
+	border: 2px solid white;
+	border-radius: 100px;
+	padding: 10px 35px;
+}
+
+.captionCool a:hover {
+	background: white;
+	transition: 0.4s;
+	color: black;
+	text-shadow: initial;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+	width: 30px;
+	height: 30px;
+}
+
+.carousel-control-next, .carousel-control-prev {
+	width: initial;
+	opacity: initial;
+}
+
+/* bouton retour haut */
+#button {
+	display: inline-block;
+	background-color: rgba(0, 0, 0, 0.493);
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	border-radius: 5px;
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	transition: background-color .3s, 
+	  opacity .5s, visibility .5s;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 1000;
+  }
+  #button::after {
+	content: "\f077";
+	font-family: FontAwesome;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 2em;
+	line-height: 50px;
+	color: #fff;
+  }
+  #button:hover {
+	cursor: pointer;
+	background-color: #333;
+  }
+  #button:active {
+	background-color: #555;
+  }
+  #button.show {
+	opacity: 1;
+	visibility: visible;
+  }
+
+/*media queries*/
+@media screen and (max-width: 1000px) {
+	.captionCool a {
+		letter-spacing: 0.2em;
+		color: white;
+		width: 250px;
+		height: 50px;
+	}
+}
+@media screen and (max-width: 640px) {
+	.imgCool {
+		width: 90vw;
+		height: 20vh;
+	}
+	.captionCool a {
+		font-size: 0.9em;
+		letter-spacing: 0.2em;
+		color: white;
+		width: 150px;
+		height: 21px;
+	}
+	.hero {
+		height: 50vh;
+	}	
+	.container h1 {
+		font-size: 2em;
+	}
+	.container p {
+		font-size: 1em;
+	}
+	.bg-text-container span {
+		display: none;
+	}
+	#profil {
+		justify-content: center;
+	}
+	#profil .text {
+		font-size: 1em;
+		width: 100%;
+	}
+	.carousel-control-next, .carousel-control-prev {
+		background: radial-gradient(circle, rgba(0, 0, 0, 0.151) 25%, rgba(0, 0, 0, 0.151) 50%, rgba(0,0,0,0) 75%);
+	}
+}
