@@ -1,0 +1,281 @@
+
+@font-face {
+	font-family: 'Press Start 2P'; src: url(fonts/PressStart2P-Regular.ttf);
+}
+
+html, body, .container {
+  width: 100%;
+  height: 100%;
+  overflow:hidden;
+  margin: 0;
+}
+
+body {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.4em;
+}  
+
+/*loading bar*/
+.anim-bar {
+  z-index: 60;
+  position: absolute;
+  width: 99%;
+  margin: 20px 10px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 2px rgba(0, 0, 0, 0.1);
+}
+
+.progress-bar {
+  padding: 10px;
+  text-align: center;
+  color: rgba(255,255,255,100);
+  background-image: linear-gradient(#FF0000, #FF8484);
+  border-radius: 10px;
+  animation: progress 6s;
+}
+
+@keyframes progress {
+  from {
+    width: 0;
+  }
+  to {
+    width: 99%;
+  }
+}
+
+/*text blink*/
+.anim-bar span {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink { 
+  0% { opacity:0; }
+  50% { opacity:1; } 
+  100% { opacity:0; }
+}
+
+/*clouds*/
+
+.container {
+  z-index: 10;
+  background: linear-gradient(#007ced ,#cce7ff);
+}
+
+.cloud {
+  height: 100%;
+  background: url(images/clouds1000.png) 0 200px,
+              url(images/clouds1200_1.png) 0 300px,
+              url(images/clouds1000_blur3.png) 100px 250px;
+  animation: wind 20s linear infinite;
+}
+
+@keyframes wind {
+  0% {
+    background-position: 0 200px, 0 300px, 100px 250px;
+  }
+  100% {
+    background-position: 1000px 200px, 1200px 300px, 1100px 250px;
+  }
+}
+
+/*sun*/
+
+.sun-div {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.sun {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  left: 75%;
+  z-index: 20;
+  background: linear-gradient(#ff0, #d00);
+  box-shadow: 0 0 40px 6px #f20, 0 0 150px 10px #f33;
+  animation: rise 10s ease forwards;
+}
+
+@keyframes rise {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: 5%;
+  }
+}
+
+
+/*mario*/
+
+.mario {
+  z-index: 50;
+  position: absolute;
+  top: 18px;
+  width: 95px;
+  height: 145px;
+  background:url(images/mario_anim.png);
+}
+
+.mario2 {
+  z-index: 51;
+  position: absolute;
+  width: 120px;
+  height: 145px;
+  background:url(images/mario_jump2.png) no-repeat -10px 0;
+}
+
+.mario {
+  animation: mario-run steps(2) 0.5s infinite,
+             mario-movement 5s forwards,
+             mario-jump 9s,
+             mario-hid 9s;
+}
+
+.mario2 {
+  animation: mario-movement 5s forwards,
+             mario-jump 9s,
+             mario-visib 9s forwards;
+}
+
+@keyframes mario-run {
+  from { background-position: 0 0; }
+  to { background-position: -195px 0; }
+}
+
+@keyframes mario-movement {
+  to { margin: 0 500px; }
+}
+
+@keyframes mario-jump {
+37%{ transform:translateY(0); }
+40%{ transform:translateY(-250px); }
+40.5%{ transform:translateY(-250px); }
+44%{ transform:translateY(0);}
+}
+
+@keyframes mario-hid {
+36.99%{ opacity: 100%; }
+37%{ opacity: 0; }
+44.99%{ opacity: 0; }
+45%{ opacity: 100%; }
+}
+
+@keyframes mario-visib {
+from { opacity: 0; }
+36.99%{ opacity: 0; }
+37%{ opacity: 100%; }
+44.99%{ opacity: 100%; }
+45%{ opacity: 0; }
+to { opacity: 0; }
+}
+
+/*goomba*/
+
+.goomba {
+  z-index: 50;
+  position: absolute;
+  bottom: 57px;
+  right: -50px;
+  width: 95px;
+  height: 145px;
+  background:url(images/goomba2.png);
+}
+
+.goomba {
+  animation: goomba-run steps(2) 0.5s infinite,
+             goomba-movement 5.2s forwards linear;
+}
+
+@keyframes goomba-run {
+  from { background-position: 0 0; }
+  to { background-position: -195px 0; }
+}
+
+@keyframes goomba-movement {
+  to { margin: 0 2000px; }
+}
+
+/*mountain*/
+
+.ground {
+  position: absolute;
+  bottom: 0;
+  z-index: 40;
+  width: 100%;
+  height: 220px;
+  background: url(images/ground.png);
+  animation: ground 3s infinite linear reverse;
+}
+
+@keyframes ground {
+  to { background-position: 500px 0; }
+}
+
+/*mountain*/
+
+.mountain {
+  position: absolute;
+  bottom: 0;
+  z-index: 35;
+  width: 100%;
+  height: 220px;
+  background: url(images/mountain2.png);
+  animation: speed-movement 200s linear infinite reverse;
+}
+
+.mountain1 {
+  position: absolute;
+  bottom: 0;
+  z-index: 35;
+  width: 100%;
+  height: 220px;
+  background: url(images/mountain1.png);
+  animation: speed-movement 180s linear infinite reverse;
+}
+
+.castle {
+  position: absolute;
+  bottom: 0;
+  z-index: 35;
+  width: 100%;
+  height: 528px;
+  background: url(images/castle.png) no-repeat;
+  animation: speed-movement 150s linear infinite reverse;
+}
+
+
+.grass1 {
+  position: absolute;
+  bottom: 0;
+  z-index: 35;
+  width: 100%;
+  height: 220px;
+  background: url(images/grass1.png);
+  animation: speed-movement 60s linear infinite reverse;
+}
+
+.grass2 {
+  position: absolute;
+  bottom: 0;
+  z-index: 35;
+  width: 100%;
+  height: 220px;
+  background: url(images/grass2.png);
+  animation: speed-movement 80s linear infinite reverse;
+}
+
+@keyframes speed-movement {
+  from { background-position: -10000px 0; }
+  to { background-position: 1000px 0; }
+}
+
+@media screen and (max-width: 1024px) {
+.anim-bar {
+display: none;
+}
+}
